@@ -1,16 +1,1 @@
-{
-  "name": "affiliate-engine",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
-    "migrate": "cd backend && npx ts-node scripts/migrate.ts",
-    "seed": "cd backend && npx ts-node scripts/seed.ts",
-    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
-    "dev:backend": "cd backend && npm run dev",
-    "dev:frontend": "cd frontend && npm run dev"
-  },
-  "devDependencies": {
-    "concurrently": "^8.2.2"
-  }
-}
+{\n  "name": "affiliate-engine",\n  "version": "1.0.0",\n  "private": true,\n  "scripts": {\n    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install && cd ../todo-app && npm install",\n    "migrate": "cd backend && npx ts-node scripts/migrate.ts",\n    "seed": "cd backend && npx ts-node scripts/seed.ts",\n    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\" \"npm run dev:todo\"",\n    "dev:backend": "cd backend && npm run dev",\n    "dev:frontend": "cd frontend && npm run dev",\n    "dev:todo": "cd todo-app && npm run dev",\n    "build:all": "npm run build:backend && npm run build:frontend && npm run build:todo",\n    "build:backend": "cd backend && npm run build",\n    "build:frontend": "cd frontend && npm run build",\n    "build:todo": "cd todo-app && npm run build"\n  },\n  "devDependencies": {\n    "concurrently": "^8.2.2"\n  }\n}\n
